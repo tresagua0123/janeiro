@@ -1,0 +1,15 @@
+version: '3.9'
+services:
+    db:
+        image: postgres
+        ports:
+            - 65433:5432
+        environment:
+            POSTGRES_USER: user
+            POSTGRES_PASSWORD: password
+            POSTGRES_DB: janeiro
+        volumes:
+            - postgres_volume:/var/lib/postgresql/data
+
+volumes:
+    postgres_volume:
